@@ -1,0 +1,130 @@
+/**
+ * This stylesheet is used to wrangle in the style of the Gutenberg editing experience
+ * along with our blocks.
+ *
+ * The first part of this adjusts properties of the editor itself including hiding panls
+ * on the side that deal with comments and addition additional styling to components which
+ * isn't something that the end users should mess with.
+ *
+ * The section after that deal with customizing the component blocks themselves witin the
+ * editor such as styling the headers we create on the fly.
+ */
+
+/* Hides the `Advanced` option in the block that allows the user to enter custom CSS rules */
+.editor-block-inspector__advanced {
+  display: none;
+}
+
+/* Adds extra spacing between the header and the first block */
+.editor-block-list__layout {
+  margin-top: 3rem;
+}
+
+/* Hides the Gutenberg default first block that allows the user to type in a paragraph block at any time */
+.editor-rich-text__tinymce[data-is-placeholder-visible="true"], .editor-rich-text {
+  display: none;
+}
+
+/* Adjusts the style of the ACF block text inputs */
+.acf-field input[type="text"], .acf-field textarea {
+  padding: 1rem 0.5rem !important;
+  border-radius: 0;
+  border-color: #ccc;
+}
+
+.acf-label {
+  margin-bottom: 0.3rem !important;
+}
+
+/* Adjusts the style of the ACF block text input labels */
+.acf-label > label {
+  color: #555;
+  font-weight: 500 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Adjusts the style of the ACF block input container */
+.acf-input-wrap {
+  overflow: initial !important;
+}
+
+/* Make the preview of the block a bit bigger */
+.wp-block {
+  max-width: 75%;
+}
+
+/* Hide the weird section at the bottom that lets you add a new block. We want to limit adding new blocks to the top left plus button */
+.block-list-appender {
+  visibility: hidden;
+}
+
+/* By default the blocks in the editor have a double border that can look weird with our headers so we turn those off */
+.editor-block-list__layout .editor-block-list__block.is-selected>.editor-block-list__block-edit:before {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Used to toggle visbility of blocks */
+.hidden {
+  display: none;
+}
+
+/* Customizes the header of each block which includes the title, extra identifier information, and the chevron icon */
+.lf-acf-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #555;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 1.25rem !important;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.lf-acf-header h4 {
+  flex: 1;
+  font-size: 1.125rem !important;
+  font-weight: bold !important;
+  color: #777;
+  line-height: initial !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.lf-acf-header span {
+  color: #999;
+  font-weight: 300;
+  font-size: 0.9rem;
+  font-style: italic;
+  padding-left: 0.5rem;
+}
+
+.lf-acf-header i {
+  position: relative;
+  font-style: normal !important;
+  top: 0.4rem;
+}
+
+.block-closed {
+  border: 1px solid #ccc;
+}
+
+.editor-styles-wrapper [data-block] {
+  margin-top: 0 !important;
+}
+
+.editor-styles-wrapper h4, .editor-styles-wrapper .h4 {
+  font-size: initial;
+}
+
+.editor-styles-wrapper em, .editor-styles-wrapper i {
+  line-height: initial !important;
+}
+
+.editor-block-list__layout .editor-block-list__block.is-selected > .editor-block-list__block-edit::before {
+  border: 0 !important;
+}

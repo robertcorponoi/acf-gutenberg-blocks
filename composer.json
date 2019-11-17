@@ -1,0 +1,17 @@
+{
+  "name": "robertcorponoi/acf-gutenberg-blocks",
+  "description": "ACF Gutenberg Blocks allows you to easily define ACF modiles as components consisting of PHP definitons, Twig structure, and stying. This lets you keep your ACF components defined in the code and cleanly stored in the project structure",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert Corponoi",
+      "email": "robertcorponoi@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.0",
+    "timber": "^1.12.1",
+    "composer/installers": "~1.0"
+  }
+}
